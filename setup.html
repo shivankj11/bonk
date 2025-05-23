@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bonk Setup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #dfdfdf;
+      background-color: #3f3f3f;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .setup-card {
+      background-color: rgb(95, 104, 88);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #e9e9e9;
+      margin-top: 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+    h2 {
+      color: #333;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .help-text {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+    .step {
+      display: flex;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+    .step-number {
+      background-color: #4285f4;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    .step-content {
+      flex-grow: 1;
+    }
+    .feature-list {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .feature-item {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      color: #4285f4;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .complete-setup {
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="setup-card">
+      <h1 style="text-align: center;">Welcome to Bonk! &#128296</h1>
+      
+      <h3>Thank you for installing the Bonk extension. Please donate to me and complete setup below! </h3>
+      
+      <div class="setup-card">
+        <h2 style="margin-top: -10px; color: #e9e9e9;">How to Use Website Blocker</h2>
+        
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <strong>Add websites to your block list</strong>
+            <p>Enter domain names of websites you want to block in the options page.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <strong>Set blocking duration</strong>
+            <p>Choose how long you want the websites to be blocked (in minutes).</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <strong>Activate blocking</strong>
+            <p>Click the "Activate Blocking" button to start blocking the websites for your specified duration.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <strong>Stay focused</strong>
+            <p>If you try to visit a blocked website, you'll see a blocking image and the tab will close automatically.</p>
+          </div>
+        </div>
+        
+        <p>You can access the options page anytime by clicking on the extension icon and selecting "Options".</p>
+      </div>
+    </div>
+      
+      <h2 style="color: #e9e9e9;">Initial Setup</h2>
+      
+      <div class="form-group">
+        <label for="initialSites">Websites to Block (Optional):</label>
+        <input type="text" id="initialSites" placeholder="e.g., facebook.com, youtube.com, twitter.com">
+        <div style="color: #bdbdbd;" class="help-text">Enter domain names separated by commas (without http:// or www.)</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="initialDuration">Default Blocking Duration (minutes):</label>
+        <input type="number" id="initialDuration" min="1" max="1440" value="60">
+        <div style="color: #bdbdbd;" class="help-text">How long should websites be blocked when activated (1-1440 minutes)</div>
+      </div>
+      
+      <div class="complete-setup">
+        <button id="completeSetup">Complete Setup</button>
+      </div>
+    </div>
+    
+    
+  
+  <script src="setup.js"></script>
+</body>
+</html>
